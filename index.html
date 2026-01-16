@@ -4,19 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Playbook-P4-TM14</title>
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <header>
-        <h1><span class="book-icon">📋</span> <strong>Playbook Sesión 14 4to Primaria</strong></h1>
+        <h1><span class="book-icon">📋</span> <strong>Playbook: Misión 14 - 4to Primaria</strong></h1>
         <div class="header-widgets">
             <div class="timer-container">
-                <span id="timer">⏱️ 00:00</span>
-                <button id="startStop">Start</button>
-                <button id="reset">Reset</button>
+                <span id="global-timer">⏱️ 40:00</span>
+                <button id="global-start-stop">Start</button>
+                <button id="global-reset">Reset</button>
             </div>
             <div class="theme-toggle">
                 <i class="fas fa-sun"></i>
@@ -28,7 +27,6 @@
             </div>
         </div>
     </header>
-
     <div class="main-container">
         <aside class="activity-list">
             <h2>Actividades</h2>
@@ -40,383 +38,404 @@
                 <li><a href="#activity-4">4</a></li>
                 <li><a href="#activity-5">5</a></li>
             </ul>
-
-            <div class="sidebar-info">
-                <p>💡 Cada actividad está cuidadosamente diseñada para involucrar a los estudiantes.</p>
-                <p>⏱️ Se proporcionan estimaciones de tiempo para cada actividad para ayudarle a mantener el rumbo.</p>
-            </div>
         </aside>
-
         <main class="content">
             <div class="progress-bar">
                 <div class="progress"></div>
             </div>
-
-            <button id="toggle-dialogues">Mostrar todos los diálogos</button>
-
+            <!-- ACTIVIDAD 0: DE UN VISTAZO -->
             <div class="activity-card" id="activity-0">
-                <h2><span class="book-icon">📝</span> De un Vistazo: Sesión Gnius</h2>
-                <p class="overview-subtitle">Resumen rápido de objetivos, materiales y preparación para el facilitador.</p>
-                <div class="overview-table-container">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th style="width: 50%;">Objetivos, Tácticas y Entregable</th>
-                                <th style="width: 50%;">Materiales Específicos y Preparación Previa</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <strong>Objetivos de Aprendizaje:</strong>
-                                    <ul>
-                                        <li>Cutebot & A.I. Lens (Face) & GCS: Cutebot reacciona a cara detectada (usando info X,Y).</li>
-                                        <li>IA: IA en interacción HRI. Fiabilidad y fallos (¿cara en póster?).</li>
-                                        <li>Parte de la Currícula de IA cubierta: Alfabetización Adicional: Confiabilidad y Fallos de IA.</li>
-                                        <li>Objetivo General de la Sesión: Que los estudiantes programen al Cutebot para que reaccione a la detección de una cara, utilizando la información de posición (X, Y) para dirigir su movimiento, y reflexionen sobre la fiabilidad de la IA en la interacción humano-robot (HRI) y sus posibles fallos.</li>
-                                    </ul>
-                                    <strong>Secuencia de Clase:</strong>
-                                    <ul>
-                                        <li>⚡ Actividad 1: Saludo de I.A. con todos</li>
-                                        <li>⚡ Actividad 2: I Can Statement + Ejemplificación</li>
-                                        <li>⚡ Actividad 3: AI GYM</li>
-                                        <li>⚡ Actividad 4: Brain Spark</li>
-                                        <li>⚡ Actividad 5: Gnius STORM (Think-Pair-Share)</li>
-                                    </ul>
-                                    <strong>Entregable Clave:</strong>
-                                    <ul>
-                                        <li>Programa en Micro:bit donde el Cutebot, usando la A.I. Lens, intenta girar o moverse en dirección a una cara detectada, utilizando la información de posición X (y opcionalmente Y).</li>
-                                        <li>Participación en la discusión sobre Interacción Humano-Robot (HRI), fiabilidad de la IA y ejemplos de falsos positivos/negativos en la detección de caras.</li>
-                                    </ul>
-                                </td>
-                                <td>
-                                    <strong>Materiales Específicos:</strong>
-                                    <ul>
-                                        <li>Proyector o pantalla interactiva.</li>
-                                        <li>Conexión a internet estable.</li>
-                                        <li>Chat de "Agente Gnius" (Xolo) activo.</li>
-                                        <li>Presentación de diapositivas (Diapositivas 1-11).</li>
-                                        <li>Robots Cutebot (1 por cada 2 estudiantes, con A.I. Lens conectada).</li>
-                                        <li>Smart A.I. Lens (1 por cada 2 estudiantes, conectada al Cutebot).</li>
-                                        <li>Micro:bits y baterías (1 por cada 2 estudiantes).</li>
-                                        <li>Acceso a MakeCode (<a href="https://makecode.microbit.org/" target="_blank">https://makecode.microbit.org/</a>), con extensión de A.I. Lens.</li>
-                                        <li>(Opcional) Dibujos simples que puedan parecerse a caras, patrones en ropa, pósters con caras para probar falsos positivos.</li>
-                                    </ul>
-                                    <strong>Preparación Previa para ESTA Sesión:</strong>
-                                    <ol>
-                                        <li><strong>Revisión de Misión (Interna):</strong>
-                                            <ul>
-                                                <li>Verificar conexión a internet.</li>
-                                                <li>Confirmar acceso y funcionamiento de MakeCode y la extensión de A.I. Lens (modo "Face detection" y bloques de información X,Y).</li>
-                                                <li>Asegurar disponibilidad, carga y conexión de Cutebots, A.I. Lens y Micro:bits.</li>
-                                                <li>Tener la presentación de diapositivas lista y en orden.</li>
-                                                <li>Probar el chat "Agente Gnius" (Xolo) para asegurar su operatividad.</li>
-                                            </ul>
-                                        </li>
-                                        <li><strong>Familiarización:</strong> Revisar el flujo de la sesión, los diálogos sugeridos y los tiempos de cada actividad. Es importante entender cómo la A.I. Lens reporta la posición X,Y de una cara.</li>
-                                        <li><strong>Ejemplo Profesor:</strong> Tener listo y funcional tu proyecto de ejemplo (Cutebot que gira lentamente hacia una cara que se mueve frente a la lente) para la demostración en la Actividad 2.</li>
-                                    </ol>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <h2><span class="book-icon">📝</span> De un Vistazo: Comando Central</h2>
+                <p class="overview-subtitle">Todo lo que necesitas para preparar y ejecutar esta misión en minutos.</p>
+                
+                <div class="command-section">
+                    <h3>🎯 Objetivo de Aprendizaje</h3>
+                    <div class="objective-box">
+                        <p><strong>Los estudiantes podrán:</strong> usar el Micro:Bit, Cutebot y Smart A.I. Lens para controlar el giro del robot mediante coordenadas X,Y y comprender los conceptos de HRI, confiabilidad y diseño seguro ante errores.</p>
+                    </div>
+                </div>
+                <div class="command-section xolo-prompt">
+                    <h3>🤖 Prompt de Referencia para XOLO (Solo para Maestro)</h3>
+                    <div class="prompt-box">
+                        <div class="prompt-header">
+                            <span class="prompt-label">⚠️ NOTA: XOLO ya conoce el tema de esta misión. Este prompt es SOLO de referencia en caso de emergencia técnica:</span>
+                            <button class="copy-btn" onclick="copyPrompt('main-prompt')">
+                                <i class="fas fa-copy"></i> Copiar
+                            </button>
+                        </div>
+                        <pre id="main-prompt">Xolo, vamos a convertir datos X,Y en movimiento del Cutebot. 1) Explícame qué son X,Y en pantalla (posición) y cómo puedo usarlos para que el robot gire a la izquierda/derecha para “centrar” la cara. 2) Luego guíame a programar: si X está a la izquierda → gira izquierda; si X está a la derecha → gira derecha; si está centrado → se queda quieto o hace una acción. 3) Ahora lo importante: ayúdame a probar fiabilidad: ¿qué pasa si la cara está en un póster, en una foto, o si hay poca luz? 4) Al final, dame un “plan anti-fallos”: cómo detectar errores y qué hacer cuando el robot se equivoca.</pre>
+                    </div>
+                </div>
+                <div class="command-section">
+                    <h3>⚡ Puntos Esenciales de la Misión</h3>
+                    <div class="essentials-grid">
+                        <div class="essential-card">
+                            <div class="essential-icon">🎓</div>
+                            <h4>Concepto Clave</h4>
+                            <p>Confiabilidad en IA: Es qué tan seguro podemos estar de que el robot hace lo correcto; por ejemplo, saber si el robot confunde una foto con una persona real.</p>
+                        </div>
+                        <div class="essential-card">
+                            <div class="essential-icon">🔧</div>
+                            <h4>Habilidad Técnica</h4>
+                            <p>Usar la cámara inteligente para que el robot siga una cara moviendo sus ruedas.</p>
+                        </div>
+                        <div class="essential-card">
+                            <div class="essential-icon">🧪</div>
+                            <h4>Experimentación</h4>
+                            <p>Probar con diferentes condiciones de luz y tipos de imágenes (fotos vs. personas reales) para entender las limitaciones de detección.</p>
+                        </div>
+                        <div class="essential-card">
+                            <div class="essential-icon">💬</div>
+                            <h4>Interacción con XOLO</h4>
+                            <p>XOLO ya conoce a cada estudiante y el tema de hoy. Solo abren el chat y comienzan a aprender. Tú guías el timing y motivación.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="command-section">
+                    <h3>📦 Checklist de Materiales</h3>
+                    <div class="materials-checklist">
+                        <label><input type="checkbox"> Proyector/pantalla + presentación (5 diapositivas)</label>
+                        <label><input type="checkbox"> Internet estable + Gnius Space con XOLO activo</label>
+                        <label><input type="checkbox"> 1 Micro:Bit por cada 2 estudiantes</label><label><input type="checkbox"> 1 Cutebot por cada 2 estudiantes</label><label><input type="checkbox"> 1 Smart A.I. Lens por cada 2 estudiantes</label>
+                        <label><input type="checkbox"> Acceso a MakeCode (https://makecode.microbit.org/) con extensión AI Lens instalada</label>
+                        <label><input type="checkbox"> Fotos impresas de caras y pósters para pruebas de fiabilidad</label>
+                        <label><input type="checkbox"> ⚠️ Esta misión usa programación con BLOQUES en MakeCode</label>
+                        <label><input type="checkbox"> 📋 Para agregar extensión: En MakeCode -> Extensiones -> Buscar 'AI Lens' -> Agregar</label>
+                    </div>
+                    <p class="care-reminder"><strong>🛡️ Cuidado del equipo:</strong> Manipular el robot con cuidado, no tocar el lente de la cámara IA y verificar que los cables estén bien conectados antes de encender.</p>
+                </div>
+                <div class="command-section">
+                    <h3>🗓️ Secuencia de la Misión (40 min)</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot">1</div>
+                            <div class="timeline-content">
+                                <strong>Intro a la Misión</strong>
+                                <span class="time-badge">2 min</span>
+                                <p>Bienvenida, I Can Statement y contexto de la misión.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot">2</div>
+                            <div class="timeline-content">
+                                <strong>A.I. Gym</strong>
+                                <span class="time-badge">8 min</span>
+                                <p>Los estudiantes abren el chat con XOLO y aprenden sobre la confiabilidad y el uso de coordenadas X,Y (sin prompt específico).</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot">3</div>
+                            <div class="timeline-content">
+                                <strong>Brain Spark</strong>
+                                <span class="time-badge">20 min</span>
+                                <p>Idear, construir y experimentar un programa con XOLO.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot">4</div>
+                            <div class="timeline-content">
+                                <strong>Gnius STORM - Compartir</strong>
+                                <span class="time-badge">5 min</span>
+                                <p>Demostración y reflexión en parejas.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot">5</div>
+                            <div class="timeline-content">
+                                <strong>Entrega de Evidencias</strong>
+                                <span class="time-badge">5 min</span>
+                                <p>Subir capturas a Gnius Space y finalizar misión.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="command-section">
+                    <h3>🚨 Resolución Rápida de Problemas</h3>
+                    <div class="troubleshooting-list">
+                        <ul>
+                            <li><strong>Si los alumnos no pueden ingresar a Gnius Space:</strong> Activa XOLO SOS en <a href="https://xolo.gnius.club" target="_blank">xolo.gnius.club</a> para continuar la misión sin interrumpir la clase.</li>
+                            <li><strong>Si el Cutebot no gira:</strong> Verificar que la batería esté cargada y que los cables de la Smart A.I. Lens estén en el puerto correcto.</li><li><strong>Si la cámara no detecta caras:</strong> Revisar que el lente esté limpio y que no haya reflejos fuertes de luz directamente hacia la cámara.</li><li><strong>Si hay errores en el código:</strong> Recordar a los estudiantes que XOLO puede ayudar a depurar. Pídeles que copien el error y se lo muestren a XOLO.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-
+            <!-- ACTIVIDAD 1: INTRO A LA MISIÓN -->
             <div class="activity-card" id="activity-1">
-                <h2>⚡ Actividad 1: Saludo de I.A. con todos ⏰ 3 minutos</h2>
-                <p>El chatbot da la bienvenida y anticipa que Cutebot intentará "seguir" caras, introduciendo la idea de ser detectives de la IA.</p>
-                <div class="steps">
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 1: Saludo de I.A. con todos ⏰ 0.5 minutos</h3>
-                            <p>(Proyectar Diapositiva 2). Da la bienvenida a los alumnos, recordando la detección de caras y adelantando la misión interactiva de hoy. Pídeles que activen a Xolo.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">¡Hola, directores de robots! Ya vimos que nuestra A.I. Lens puede detectar caras. Hoy vamos a hacer algo aún más interactivo: ¡vamos a intentar que nuestro Cutebot reaccione e incluso intente 'seguir' o 'mirar' hacia donde detecta una cara! Y también seremos detectives de la IA, buscando cuándo podría no funcionar tan bien. Antes de empezar, activen a Xolo. Salúdenlo en el chat con su nombre y sus gustos. Por ejemplo: 'Hola Xolo, soy [Nombre] y me gustan los juegos de seguir al líder y los robots que interactúan'."</p>
-                            </div>
-                        </div>
+                <div class="activity-header">
+                    <h2>🚀 Actividad 1: Intro a la Misión</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 2:00</span>
+                        <button class="timer-start-btn" data-duration="120">Iniciar</button>
                     </div>
-                      <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 2: Saludo de I.A. con todos ⏰ 2.5 minutos</h3>
-                            <p>Monitorea a los alumnos mientras interactúan con Xolo. Asegúrate de que todos reciban una respuesta y resuelve cualquier problema técnico.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">¡Excelente! Xolo está listo para esta misión de seguimiento e investigación. Si alguien no ha recibido respuesta de Xolo, levante la mano.</p>
-                            </div>
-                        </div>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Dar la bienvenida con energía.</li>
+                            <li>Pedir a los alumnos que ingresen a Gnius Space.</li>
+                            <li>Proyecta diapositiva 1 con el I Can Statement.</li>
+                            <li>Motiva: "¡Hoy le daremos ojos inteligentes a sus Cutebots para que los sigan a todas partes!".</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <ul>
+                            <li>XOLO ya está listo y conoce a cada estudiante.</li>
+                            <li>Sabe que hoy toca aprender sobre HRI y confiabilidad en robots.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Escucha la misión del día.</li>
+                            <li>Loguearse en Gnius Space.</li>
+                            <li>Preparación para trabajar en parejas.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 1: I Can Statement</h4>
+                    <div class="slide-content">
+                        <p><strong>🎯 Hoy seré capaz de:</strong></p>
+                        <p class="highlight-text">🤖 A usar coordenadas de la cámara para que el Cutebot siga tu cara de forma segura.</p>
+                        <p><strong>Aplicación real:</strong> Los robots de asistencia en hospitales usan esta tecnología para seguir a los doctores y evitar chocar con obstáculos o confundir sombras con personas.</p>
+                        <p><strong>Tu aliado:</strong> XOLO ya sabe qué vas a aprender hoy. ¡Solo abre el chat y comienza!</p>
                     </div>
                 </div>
             </div>
-
+            <!-- ACTIVIDAD 2: A.I. GYM -->
             <div class="activity-card" id="activity-2">
-                <h2>⚡ Actividad 2: I Can Statement + Ejemplificación ⏰ 5 minutos</h2>
-                <p>Presentar cómo Cutebot usará las coordenadas X,Y para reaccionar a caras, el concepto de HRI y la fiabilidad de la IA.</p>
-                <div class="steps">
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 1: Introducción y Contextualización ⏰ 2 minutos</h3>
-                            <p>(Proyectar Diapositiva 3). Introduce la idea de usar las coordenadas X,Y de la cara detectada para que Cutebot gire, y menciona la Interacción Humano-Robot (HRI) y la fiabilidad.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">Sabemos que la lente puede decirnos 'veo una cara' y también nos da pistas sobre dónde está esa cara en su campo de visión, usando las coordenadas X (horizontal) e Y (vertical). Hoy usaremos esa información para que Cutebot, por ejemplo, gire hacia la cara que detecta. Esto es un ejemplo de Interacción Humano-Robot (HRI), ¡donde el robot responde a una persona! Pero, ¿qué pasa si la IA se confunde? ¿Si cree ver una cara en un dibujo de un póster? Hablaremos de la fiabilidad de la IA.</p>
-                            </div>
-                        </div>
+                <div class="activity-header">
+                    <h2>🧠 Actividad 2: A.I. Gym</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 8:00</span>
+                        <button class="timer-start-btn" data-duration="480">Iniciar</button>
                     </div>
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 2: Presentación del Proyecto del Profesor ⏰ 1 minuto</h3>
-                            <p>Muestra tu proyecto de ejemplo (Cutebot girando lentamente hacia una cara que se mueve frente a la lente) ya cargado y funcionando. Esta es una demostración en vivo.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">Miren este ejemplo: (Muestra el Cutebot con A.I. Lens. Mueve tu cara lentamente frente a la lente, y el Cutebot intenta girar para seguirla). Mi 'idea (vibe)' fue que Cutebot intentara mantenerme en su campo de visión.</p>
-                            </div>
-                        </div>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Proyecta diapositiva 2.</li>
+                            <li>Indica: "Abran el chat con XOLO y salúdenlo. Él ya sabe qué les va a enseñar hoy."</li>
+                            <li>Circula para asegurar que todos interactúan con XOLO.</li>
+                            <li>Si alguien tiene dudas, recuérdale: "Pregúntale a XOLO, él te puede explicar de otra forma".</li>
+                        </ul>
                     </div>
-                     <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 3: "I Can Statement" y Conexión ⏰ 2 minutos</h3>
-                            <p>(Proyectar Diapositiva 4). Presenta formalmente el 'I Can Statement'.</p>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <p class="xolo-status">✅ XOLO ACTIVO</p>
+                        <ul>
+                            <li>Reconoce al estudiante y sus preferencias de aprendizaje.</li>
+                            <li>Explica cómo las coordenadas X e Y de la cámara se convierten en órdenes para los motores del robot.</li>
+                            <li>Introduce el concepto de confiabilidad y por qué un robot podría equivocarse con una foto.</li>
+                            <li>Responde dudas sobre los conceptos.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Abrir el chat con XOLO y saludarlo.</li>
+                            <li>Aprender a usar la Smart A.I. Lens para centrar objetos en movimiento.</li>
+                            <li>Aprender sobre por qué los robots necesitan reglas de seguridad.</li>
+                            <li>Despejar todas sus dudas preguntando a XOLO.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 2: A.I. GYM</h4>
+                    <div class="slide-content">
+                        <p><strong>💬 Abre el chat con XOLO y salúdalo:</strong></p>
+                        <div class="prompt-box">
+                            <pre>"¡Hola XOLO! Estoy listo para aprender."</pre>
                         </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">Al final de la clase, podrán decir: '<strong>Yo puedo programar mi Cutebot para que intente moverse o reaccionar en dirección a una cara detectada por la A.I. Lens, y puedo pensar en situaciones donde esta detección de caras podría fallar o ser menos confiable.</strong>' ¡A programar robots interactivos!</p>
-                            </div>
-                        </div>
+                        <p class="highlight-text" style="margin-top: 1rem;">✨ XOLO ya sabe quién eres y qué tema toca hoy. ¡Solo empieza a conversar!</p>
+                        <p class="highlight-text">🎯 Objetivo: Aprender a usar la cámara IA para controlar el giro y entender la fiabilidad.</p>
+                    </div>
+                </div>
+                
+                <div class="optional-script">
+                    <button class="collapsible-button">📖 Ver guion detallado (opcional)</button>
+                    <div class="collapsible-content">
+                        <p class="dialogue assistant">¡Hola a todos! Ahora vamos a aprender algo increíble. Abran su chat con XOLO y salúdenlo. XOLO ya los conoce y sabe exactamente qué les va a enseñar hoy. No necesitan escribir un prompt especial, solo empiecen a platicar con él. Vamos a descubrir cómo el Cutebot usa coordenadas X e Y para "ver" y seguir sus caras. Pónganle mucha atención cuando les explique por qué a veces el robot se confunde con una foto. ¡Pregúntenle todo lo que quieran sobre cómo funcionan sus ojos electrónicos!</p>
                     </div>
                 </div>
             </div>
-
+            <!-- ACTIVIDAD 3: BRAIN SPARK -->
             <div class="activity-card" id="activity-3">
-                <h2>⚡ Actividad 3: AI GYM ⏰ 7 minutos</h2>
-                <p>Introducir cómo usar `face(s)' info: X, Y` para dirigir a Cutebot, y los conceptos de HRI, fiabilidad y fallos de la IA (falsos positivos/negativos).</p>
-                <div class="steps">
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 1: Instrucción Inicial y Contextualización de la IA ⏰ 1 minuto</h3>
-                            <p>(Proyectar Diapositiva 5). Presenta el A.I. GYM y da la instrucción para que los alumnos pidan la información a Xolo.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">¡Genios, al A.I. GYM! 🧠💪 Xolo nos explicará cómo usar la información de posición (X,Y) de una cara para que Cutebot reaccione, y hablaremos sobre Interacción Humano-Robot (HRI), la fiabilidad de la IA y sus posibles fallos. Escriban en el chat: 'Mi perfil es [escribe aquí tus gustos/intereses] y quiero aprender a usar la posición X,Y de una cara para controlar a Cutebot, y sobre HRI, fiabilidad y fallos de la IA'.</p>
-                            </div>
-                        </div>
+                <div class="activity-header">
+                    <h2>💡 Actividad 3: Brain Spark</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 20:00</span>
+                        <button class="timer-start-btn" data-duration="1200">Iniciar</button>
                     </div>
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 2: Interacción Guiada y Ejemplo de Plan (GCS) ⏰ 6 minutos</h3>
-                            <p>(Proyectar Diapositivas 6 y 7). Monitorea a los alumnos. Xolo les explicará cómo usar `face(s)' info: X` para los giros. También cubrirá los temas de <strong>Interacción Humano-Robot (HRI)</strong>, la <strong>fiabilidad</strong> de la IA y sus posibles <strong>fallos</strong> (falsos positivos/negativos), y la importancia de considerarlos.</p>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Proyecta la diapositiva 3.</li>
+                            <li>Indica: "Pidan a XOLO que los ayude a idear un proyecto. Cuando tengan su GCS, pásenlo a bloques en MakeCode, prueben en el simulador y luego con el hardware real".</li>
+                            <li>Entrega por parejas los Cutebots y A.I. Lenses conforme los alumnos prueben su GCS en el simulador.</li>
+                            <li>Si hay errores, recuerda: "Pregúntenle a XOLO, él los ayuda a depurar".</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <p class="xolo-status">✅ XOLO ACTIVO</p>
+                        <ul>
+                            <li>Ayuda a desarrollar una idea y un VIBE que aplique el seguimiento de caras seguro.</li>
+                            <li>Entrega el GCS de la idea del genio.</li>
+                            <li>Resuelve errores de sintaxis o lógica.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Trabajar con XOLO una idea y un VIBE para usar el Cutebot como robot guía.</li>
+                            <li>Traducir el GCS de XOLO a bloques en MakeCode.</li>
+                            <li>Depurar su programa con XOLO si hay errores.</li>
+                            <li>Conectar la Smart A.I. Lens al Cutebot y probar.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 3: Brain Spark</h4>
+                    <div class="slide-content">
+                        <p><strong>1. 💬 Pide a XOLO que te ayude a crear:</strong></p>
+                        <div class="prompt-box">
+                            <pre>"Xolo, ideemos un mini-proyecto HRI donde el Cutebot sea un “robot guía” que solo reacciona cuando realmente detecta una cara y mantiene distancia segura. Quiero: 1) escenario y VIBE, 2) regla de seguridad (si se acerca demasiado, se detiene), 3) regla de fiabilidad (si detecta cara pero no se mantiene estable por 2 lecturas seguidas, no actúa), y 4) el GCS con esas condiciones."</pre>
                         </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">(Mientras los alumnos interactúan con Xolo) ¡Muy bien! Xolo les está explicando cómo usar la información de la posición X de la cara para que Cutebot gire. Pongan atención también a los conceptos de <strong>Interacción Humano-Robot (HRI)</strong>, qué tan <strong>confiable</strong> es la IA, y los tipos de <strong>fallos</strong> que puede tener, como los <strong>falsos positivos</strong> y <strong>falsos negativos</strong>.</p>
-                                <p class="dialogue assistant">Para que vean un ejemplo de GCS para seguir una cara horizontalmente, Xolo podría presentarles esto:</p>
-                                <pre class="dialogue assistant" style="color: #d32f2f;">
-AL INICIO:
-    Initialize AI-Lens
-    Switch function as Face
-    // (Definir umbrales para X, ej. si X es 0-100, centro_izq=40, centro_der=60)
-
-POR SIEMPRE:
-    SI (Image contains a face):
-        fijar variable "posX" a face(s)' info: X
-        SI (variable "posX" < 40): // Cara a la izquierda
-            cutebot_girar_izquierda(25)
-        SINO SI (variable "posX" > 60): // Cara a la derecha
-            cutebot_girar_derecha(25)
-        SINO: // Cara en el centro
-            cutebot_detener()
-        FIN SI
-    SINO:
-        cutebot_detener()
-    FIN SI
-    ESPERAR 0.1 segundos
-                                </pre>
-                                <p class="dialogue assistant">Si tienen dudas, ¡pregúntenle a Xolo! Por ejemplo: <br>
-                                <strong>* 'Xolo, ¿qué es un "falso positivo" en un juego?'</strong> (Relacionar con sus gustos) <br>
-                                <strong>* 'Si un robot de seguridad tiene un "falso negativo", ¿qué podría pasar?'</strong><br>
-                                <strong>* '¿Cómo hacen los programadores para que la IA falle menos?'</strong></p>
-                            </div>
-                        </div>
+                        <p style="margin-top: 1.5rem;"><strong>2. 🔬 Experimenta y descubre con tu programa:</strong></p>
+                        <ul>
+                            <li>¿El Cutebot gira hacia tu cara cuando te mueves a los lados?</li>
+                            <li>¿Qué sucede si cubres parcialmente el lente de la cámara con el dedo?</li>
+                            <li>¿Funciona igual el seguimiento con mucha luz que en un rincón oscuro del salón?</li>
+                            <li>Si el robot sigue una foto en un póster, ¿qué nos dice eso sobre su fiabilidad?</li>
+                            <li>¿Cómo ayuda la regla de "detenerse si está muy cerca" a que el robot sea más seguro para los humanos?</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="optional-script">
+                    <button class="collapsible-button">📖 Ver guion detallado (opcional)</button>
+                    <div class="collapsible-content">
+                        <p class="dialogue assistant">¡Es hora de crear, genios! Vamos a convertir a nuestro Cutebot en un robot guía súper confiable. Primero, usen el prompt en pantalla para que XOLO los ayude a idear el VIBE de su proyecto. Una vez que tengan su GCS, pásenlo a bloques en MakeCode. Por ejemplo, podrían crear un robot que los acompañe por el salón pero que se detenga si se acercan demasiado para no chocar. No olviden probar si su robot es engañado por una foto o si solo sigue personas reales. Si tienen errores o dudas, pregúntenle a XOLO, él los ayudará a depurar su código. ¡A construir!</p>
+                    </div>
+                </div>
+                <div class="challenge-prompt">
+                    <h4>🚀 Prompt de Desafío (para quienes terminen rápido)</h4>
+                    <div class="prompt-box">
+                        <p><strong>Si ya experimentaste con todo, pregunta a XOLO:</strong></p>
+                        <p class="challenge-text">"Ya probé con el seguimiento básico. ¿Puedes enseñarme cómo hacer que mi Cutebot cambie el color de sus luces dependiendo de si la cara está centrada o no?"</p>
                     </div>
                 </div>
             </div>
-
+            <!-- ACTIVIDAD 4: GNIUS STORM - COMPARTIR -->
             <div class="activity-card" id="activity-4">
-                 <h2>⚡ Actividad 4: Brain Spark ⏰ 20 minutos</h2>
-                <p>Ideación de la reacción a la posición de la cara, traducción a GCS, implementación, prueba y experimentación con fiabilidad y fallos.</p>
-                <div class="steps">
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 1: Introducción al Brain Spark y Preparación del Experimento ⏰ 2 minutos</h3>
-                            <p>(Proyectar Diapositiva 8). Presenta la actividad. Indica que la 'idea (vibe)' es que Cutebot intente "mirar" su cara. Deberán coordinarse en pareja para usar el material compartido y realizar los turnos de programación y pruebas.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">¡Tiempo, directores de robots interactivos! Ahora al Brain Spark. La 'idea (vibe)' es: 'Quiero que mi Cutebot intente girar para 'mirar' mi cara. Si mi cara está a su izquierda, que gire a la izquierda. Si está a su derecha, que gire a la derecha.' Aunque la idea es individual, recuerden que comparten el material en pareja. Pónganse de acuerdo para los turnos de programación y para probar cómo su Cutebot los sigue.</p>
-                            </div>
-                        </div>
+                <div class="activity-header">
+                    <h2>⚡ Actividad 4: Gnius STORM - Compartir y Reflexionar</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 5:00</span>
+                        <button class="timer-start-btn" data-duration="300">Iniciar</button>
                     </div>
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 2: Planificación con IA (El GCS) y Logística ⏰ 4 minutos</h3>
-                            <p>(Proyectar Diapositiva 9). Guía a los alumnos sobre cómo pedir a Xolo su GCS para el seguimiento horizontal de la cara, ayudando a definir los umbrales para X. Asegúrate de que cada pareja tenga su material.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                 <p class="dialogue assistant">Para su 'idea (vibe)' de que Cutebot los "mire", díganle a Xolo: 'Quiero que mi Cutebot gire a la izquierda si mi cara está a su izquierda (usando face(s)' info: X) y a la derecha si está a su derecha. Ayúdame a definir los valores para X (ej. si X va de 0 a 100, el centro es 50; izquierda < 40, derecha > 60).'.</p>
-                                <p class="dialogue assistant">Xolo podría generar un GCS como este (Xolo guiará sobre cómo encontrar/estimar los valores de umbral para X):</p>
-                                <pre class="dialogue assistant" style="color: #d32f2f;">
-AL INICIO:
-    Initialize AI-Lens
-    Switch function as Face
-    mostrar texto "Te sigo!"
-
-POR SIEMPRE:
-    SI (Image contains a face):
-        fijar variable "pos_X_cara" a face(s)' info: X
-
-        // Ajustar estos valores según el rango de X de la lente (ej. 0-100)
-        SI (variable "pos_X_cara" < 40): // Cara a la izquierda
-            cutebot_girar_izquierda(30) // Girar suave
-        SINO SI (variable "pos_X_cara" > 60): // Cara a la derecha
-            cutebot_girar_derecha(30) // Girar suave
-        SINO: // Cara más o menos en el centro
-            cutebot_detener() 
-        FIN SI
-    SINO:
-        cutebot_detener() // Si no ve cara, se detiene
-    FIN SI
-    ESPERAR 0.1 segundos 
-                                </pre>
-                            </div>
-                        </div>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Organiza las parejas para compartir.</li>
+                            <li>Gestiona los tiempos: 2 min demo + 2 min reflexión + 1 min cierre.</li>
+                            <li>Facilita retroalimentación constructiva.</li>
+                            <li>Cierra con reflexión sobre aplicaciones reales.</li>
+                        </ul>
                     </div>
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 3: Implementación y Prueba ⏰ 8 minutos</h3>
-                            <p>Da tiempo para implementar el GCS y probar moviendo sus caras lentamente frente al Cutebot.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">¡A programar el seguimiento! Tomen su GCS y constrúyanlo en MakeCode. Luego, prueben moviendo sus caras lentamente de un lado a otro frente al Cutebot. ¡Asegúrense de turnarse con su compañero!</p>
-                            </div>
-                        </div>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <p class="xolo-status">⏸️ XOLO EN ESPERA</p>
+                        <ul>
+                            <li>Disponible solo si hay dudas finales urgentes.</li>
+                        </ul>
                     </div>
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 4: Experimentación con Fiabilidad y Fallos ⏰ 5 minutos</h3>
-                            <p>Guía a los alumnos para experimentar: ¿Sigue bien? ¿Si se mueven rápido? Probar falsos positivos (dibujos, pósters) y falsos negativos (poca luz, cara de perfil). Discutir problemas si un robot real se equivoca así.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">Ahora, ¡a investigar la fiabilidad! ¿El Cutebot siempre los sigue bien? ¿Qué pasa si se mueven muy rápido? <strong>Prueba de Falsos Positivos:</strong> Muestren al Cutebot dibujos que parezcan caras, patrones en la ropa o un póster con una cara. ¿Intenta "seguir" estas no-caras? <strong>Prueba de Falsos Negativos:</strong> Muestren la cara con poca luz, muy de perfil o tapándose parcialmente. ¿Deja de detectarlos? Discutan: ¿Qué problemas podría causar si un robot real se equivoca así?</p>
-                            </div>
-                        </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Demuestra su programa funcionando a otra pareja.</li>
+                            <li>Explica qué condiciones de luz hicieron que su robot funcionara bien.</li>
+                            <li>Comparte un descubrimiento interesante.</li>
+                            <li>Da retroalimentación positiva al compañero.</li>
+                        </ul>
                     </div>
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 5: Mejoras y Desafíos ⏰ 1 minutos</h3>
-                            <p>Ofrece desafíos adicionales.</p>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 4: Think-Pair-Share</h4>
+                    <div class="slide-content tps-structure">
+                        <div class="tps-phase">
+                            <h4>🤔 THINK (30 seg)</h4>
+                            <p>Reflexión individual: ¿Qué situaciones confundieron más a tu Cutebot? ¿Qué te sorprendió?</p>
                         </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">¿Su Cutebot ya es un buen seguidor de caras? ¡Impresionante! Para un desafío extra: ¿Pueden hacer que avance hacia la cara si está centrada (usando también `face(s)' info: Y`)? ¡Consulten con Xolo!</p>
-                            </div>
+                        <div class="tps-phase">
+                            <h4>👥 PAIR (2 min)</h4>
+                            <p>Con otra pareja: Demuestren su programa y expliquen su experiencia</p>
+                            <p class="highlight-text">Frase guía: "Mi Cutebot detectó mejor las caras cuando había buena luz. Me sorprendió que también intentara seguir la foto del libro."</p>
+                        </div>
+                        <div class="tps-phase">
+                            <h4>💬 SHARE (2 min)</h4>
+                            <p>Retroalimentación mutua y cierre del maestro.</p>
                         </div>
                     </div>
                 </div>
             </div>
-
+            <!-- ACTIVIDAD 5: ENTREGA DE EVIDENCIAS -->
             <div class="activity-card" id="activity-5">
-                <h2>⚡ Actividad 5: Gnius STORM ⏰ 5 minutos</h2>
-                <p>Los alumnos muestran cómo sus Cutebots intentan seguirlos y comparten ejemplos de fallos en la detección.</p>
-                <div class="steps">
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 1: Gnius STORM (Think - Individual) ⏰ 0.5 minutos</h3>
-                            <p>(Proyectar Diapositiva 10). Presenta la actividad.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">¡Tiempo, directores de robots interactivos y detectives de IA! Han explorado cómo Cutebot sigue caras y cuándo puede fallar. En nuestro Gnius STORM, compartiremos estos importantes descubrimientos.</p>
-                            </div>
-                        </div>
+                <div class="activity-header">
+                    <h2>✅ Actividad 5: Entrega de Evidencias</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 5:00</span>
+                        <button class="timer-start-btn" data-duration="300">Iniciar</button>
                     </div>
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 2: Gnius STORM (Pair - Parejas) ⏰ 0.5 minutos</h3>
-                            <p>Reflexión individual.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">Antes de compartir, piensen 30 segundos: <strong>¿Cómo intentó su Cutebot seguirlos? ¿Fue fácil "engañar" a la IA para que viera una cara donde no la había, o para que no viera su cara? ¿Por qué creen que la fiabilidad es tan importante cuando los robots interactúan con nosotros?</strong></p>
-                            </div>
-                        </div>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Proyecta diapositiva 5 con las instrucciones.</li>
+                            <li>Guía a los estudiantes para tomar las capturas.</li>
+                            <li>Asegura que todos suban sus evidencias a Gnius Space.</li>
+                            <li>Felicita al grupo por completar la misión.</li>
+                        </ul>
                     </div>
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 3: Gnius STORM (Share - Retroalimentación) ⏰ 1.5 minutos</h3>
-                            <p>Indica a los alumnos que se junten en parejas, muestren cómo sus Cutebots intentan seguirlos y compartan ejemplos de cuándo la detección funcionó bien o falló.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">¡Muy bien! Con su compañero, muestren cómo su Cutebot intenta seguirlos. Compartan ejemplos de cuándo la detección facial funcionó bien o cuándo falló (falsos positivos/negativos). Expliquen: <strong>'Mi Cutebot [describe el seguimiento]. Cuando le mostré [ejemplo de fallo], [resultado].'</strong> El compañero debe observar y escuchar.</p>
-                            </div>
-                        </div>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <p class="xolo-status">⭕ XOLO FINALIZADO</p>
+                        <ul>
+                            <li>La interacción con XOLO ha terminado para esta misión.</li>
+                        </ul>
                     </div>
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 4: Gnius STORM (Reflexión Final) ⏰ 1.5 minutos</h3>
-                            <p>Guía la retroalimentación y la discusión sobre la importancia de la fiabilidad.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">Ahora, la retroalimentación y discusión en pareja: <br>
-                                <strong>* 'Me pareció muy listo cómo tu Cutebot intentó [acción de seguimiento del compañero].'</strong><br>
-                                <strong>* 'El fallo que encontraste con [ejemplo de fallo del compañero] es muy interesante porque...'</strong><br>
-                                <strong>* '¿Qué tan confiable crees que necesita ser un robot que nos ayuda en casa o en la calle?'</strong></p>
-                            </div>
-                        </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Tomar screenshot de su código en MakeCode.</li>
+                            <li>Tomar screenshot de su conversación con XOLO.</li>
+                            <li>Subir ambas evidencias a Gnius Space.</li>
+                            <li>Dar click en "Finalizar Misión".</li>
+                        </ul>
                     </div>
-                     <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 5: Gnius STORM (Reflexión Final) ⏰ 1 minuto</h3>
-                            <p>(Proyectar Diapositiva 11). Cierra la sesión reforzando la idea de que la IA no es perfecta, puede cometer errores, y entender estos fallos es crucial para diseñar sistemas seguros.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">¡Han hecho un gran trabajo explorando la interacción humano-robot y la fiabilidad de la IA! Vieron que, aunque la IA puede hacer cosas asombrosas como seguir sus caras, no es perfecta. Puede cometer errores (falsos positivos y negativos). Entender estos fallos es crucial para diseñar sistemas de IA seguros y que funcionen bien en el mundo real, especialmente si van a interactuar con personas. Siempre debemos preguntarnos: ¿Qué tan confiable es esta IA y qué pasa si se equivoca? Hoy lograron decir: '<strong>Yo puedo programar mi Cutebot para que intente moverse o reaccionar en dirección a una cara detectada por la A.I. Lens, y puedo pensar en situaciones donde esta detección de caras podría fallar o ser menos confiable.</strong>' ¡Son unos verdaderos evaluadores de IA!</p>
-                            </div>
-                        </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 5: ¡Misión Cumplida!</h4>
+                    <div class="slide-content">
+                        <p><strong>📸 Para terminar, sube tus evidencias a Gnius Space:</strong></p>
+                        <ol>
+                            <li>Una captura de pantalla de tu programa final en <strong>MakeCode</strong>.</li>
+                            <li>Una captura de pantalla de tu conversación con <strong>XOLO</strong> donde te dio tu GCS.</li>
+                        </ol>
+                        <p class="highlight-text" style="margin-top: 1rem;">¡No olvides dar click en el botón <strong>"Finalizar Misión"</strong> cuando termines!</p>
                     </div>
                 </div>
             </div>
         </main>
     </div>
-
     <script src="script.js"></script>
 </body>
-</html>
+</html></html>
